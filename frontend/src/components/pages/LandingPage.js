@@ -7,8 +7,39 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Typography } from "@material-ui/core";
 import contatct from "../../images/contact.jpeg";
 import ContactForm from "./ContactForm";
+import SignInOutContainer from "./popup";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
+
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(0, 0, 0),
+  },
+}));
 
 const LandingPage = () => {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return (
     <div>
       <div className="common-color" style={{background:"#43A0E7"}}>
@@ -107,7 +138,7 @@ const LandingPage = () => {
                   tested here!
                 </h2>
                 <div className="d-flex justify-content-center justify-content-lg-start">
-                  <a href="#about" className="btn-get-started scrollto">
+                  <a href="#about" className="btn-get-started scrollto" onClick={handleOpen}>
                     Get Started
                   </a>
                   <a
@@ -160,6 +191,26 @@ const LandingPage = () => {
       {/* <!-- End Hero --> */}
 
       <main id="main">
+      <div>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={open}>
+              <div className={classes.paper}>
+                <SignInOutContainer />
+              </div>
+            </Fade>
+          </Modal>
+        </div>
         {/* <!-- ======= About Us Section ======= --> */}
         <section id="about" className="about section-bg">
           <div className="container" data-aos="fade-up">
