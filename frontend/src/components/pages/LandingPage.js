@@ -13,46 +13,16 @@ const LandingPage = () => {
     <div>
       <div className="common-color">
         {/* <!-- ======= Header ======= --> */}
-        <header id="header" className="fixed-top ">
+
+        {/* <header id="header" className="fixed-top ">
           <div className="container d-flex align-items-center">
             <h1 className="logo me-auto">
               <a href="index.html">Resume Maker</a>
             </h1>
-            {/* <!-- Uncomment below if you prefer to use an image logo --> */}
-            {/* <!-- <a href="index.html" className="logo me-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>--> */}
 
             <nav id="navbar" className="navbar">
               <ul>
-                {/*<li>
-                  <a className="nav-link scrollto active" href="#hero">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link scrollto" href="#about">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link scrollto" href="#services">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link scrollto" href="#portfolio">
-                    Blogs
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link scrollto" href="#team">
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link scrollto" href="#contact">
-                    Contact
-                  </a>
-                </li>*/}
+            
                 <div class="dropdown">
                   <button class="dropbtn">MENU</button>
                   <div class="dropdown-content">
@@ -85,11 +55,11 @@ const LandingPage = () => {
                 </li>
               </ul>
               <i className="bi bi-list mobile-nav-toggle"></i>
-            </nav>
+            </nav> */}
 
-            {/* <!-- .navbar --> */}
-          </div>
-        </header>
+        {/* <!-- .navbar --> */}
+        {/* </div> */}
+        {/* </header> */}
         {/* <!-- End Header --> */}
 
         {/* <!-- ======= Hero Section ======= --> */}
@@ -101,14 +71,11 @@ const LandingPage = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h1>Build And Test Your Resume Interview-Ready</h1>
-                <h2>
-                  Get your resume created in a hassle free manner and get it
-                  tested here!
-                </h2>
+                <h1>GenMoney</h1>
+                <h2>The modern banking solution for the next generation!</h2>
                 <div className="d-flex justify-content-center justify-content-lg-start">
                   <a href="#about" className="btn-get-started scrollto">
-                    Get Started
+                    Get early access
                   </a>
                   <a
                     href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
@@ -434,139 +401,7 @@ const LandingPage = () => {
         {/* <!-- End ATS Section --> */}
 
         {/* <!-- ======= Portfolio Section ======= --> */}
-        <section id="portfolio" className="portfolio">
-          <div className="container" data-aos="fade-up">
-            <div className="section-title">
-              <h2>Blogs</h2>
-              <p>
-                If you have any questions, you may check out our posts on resume
-                building or ATS!
-              </p>
-              <br />
 
-              <div className="searchbar">
-                <SearchIcon />
-                <input
-                  type="text"
-                  placeholder="Search a keyword"
-                  style={{
-                    width: "40vw",
-                    backgroundColor: "rgb(48,109,159,0.5)",
-                    borderRadius: "10px",
-                    height: "2rem",
-                    border: "none",
-                  }}
-                />
-              </div>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <BlogSlider slides={BlogData} />
-
-            {/* <ul id="portfolio-flters" className="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <li data-filter="*" className="filter-active">All</li>
-                    <li data-filter=".filter-app">App</li>
-                    <li data-filter=".filter-card">Card</li>
-                    <li data-filter=".filter-web">Web</li>
-                    </ul>
-
-                    <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>App 1</h4>
-                        <p>App</p>
-                        <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="App 1"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>Web 3</h4>
-                        <p>Web</p>
-                        <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Web 3"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>App 2</h4>
-                        <p>App</p>
-                        <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="App 2"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>Card 2</h4>
-                        <p>Card</p>
-                        <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Card 2"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>Web 2</h4>
-                        <p>Web</p>
-                        <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Web 2"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>App 3</h4>
-                        <p>App</p>
-                        <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="App 3"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>Card 1</h4>
-                        <p>Card</p>
-                        <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Card 1"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>Card 3</h4>
-                        <p>Card</p>
-                        <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Card 3"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div className="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" className="img-fluid" alt=""/></div>
-                        <div className="portfolio-info">
-                        <h4>Web 3</h4>
-                        <p>Web</p>
-                        <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Web 3"><i className="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-                        </div>
-                    </div> */}
-
-            {/* </div> */}
-          </div>
-        </section>
         {/* /* <!-- End Portfolio Section --> */}
 
         {/* <!-- ======= Team Section ======= --> */}
@@ -594,32 +429,6 @@ const LandingPage = () => {
             </div>
 
             <div className="row">
-              <div className="col">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="100"
-                >
-                  <div className="member-info">
-                    <div className="pic">
-                      <img
-                        src="assets/img/team/Suyash_Jamdade.jpg"
-                        className="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <h4>Suyash Jamdade</h4>
-                    <span> Developer</span>
-                    <div className="social">
-                      {/* <a href=""><i className="ri-twitter-fill"></i></a> */}
-                      <a href="https://www.linkedin.com/in/suyash-jamdade-5aa1221a3/">
-                        {" "}
-                        <i className="ri-linkedin-box-fill"></i>{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div className="col">
                 <div
                   className="member d-flex align-items-start"
@@ -705,75 +514,20 @@ const LandingPage = () => {
                 <div
                   className="member d-flex align-items-start"
                   data-aos="zoom-in"
-                  data-aos-delay="200"
-                >
-                  <div className="member-info">
-                    <div className="pic">
-                      <img
-                        src="assets/img/team/Bhakti_Trivedi.png"
-                        className="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <h4>Bhakti Trivedi</h4>
-                    <span>Developer</span>
-                    <div className="social">
-                      {/* <a href=""><i className="ri-twitter-fill"></i></a> */}
-                      <a href="https://www.linkedin.com/in/bhaktitrivedi/">
-                        {" "}
-                        <i className="ri-linkedin-box-fill"></i>{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                >
-                  <div className="member-info">
-                    <div className="pic">
-                      <img
-                        src="assets/img/team/Priyanshi.jpeg"
-                        className="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <h4>Priyanshi Sinha</h4>
-                    <span>Designer</span>
-                    <div className="social">
-                      {/* <a href=""><i className="ri-twitter-fill"></i></a> */}
-                      <a href="https://www.linkedin.com/in/priyanshisinha/">
-                        {" "}
-                        <i className="ri-linkedin-box-fill"></i>{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
                   data-aos-delay="300"
                 >
                   <div className="member-info">
                     <div className="pic">
-                      <img
+                      {/* <img
                         src="assets/img/team/Aastha_Sharma1.jpeg"
                         className="img-fluid"
                         alt=""
-                      />
+                      /> */}
                     </div>
-                    <h4>Aastha Sharma</h4>
-                    <span>Designer</span>
+                    <h4>Nikhil Agarwal</h4>
+                    <span></span>
                     <div className="social">
-                      {/* <a href=""><i className="ri-twitter-fill"></i></a> */}
-                      <a href="">
+                      <a href="https://www.linkedin.com/in/nikhila3/">
                         {" "}
                         <i className="ri-linkedin-box-fill"></i>{" "}
                       </a>
@@ -782,7 +536,7 @@ const LandingPage = () => {
                 </div>
               </div>
 
-              <div className="col">
+              <div className="col" style={{ alignContent: "center" }}>
                 <div
                   className="member d-flex align-items-start"
                   data-aos="zoom-in"
@@ -790,17 +544,17 @@ const LandingPage = () => {
                 >
                   <div className="member-info">
                     <div className="pic">
-                      <img
+                      {/* <img
                         src="assets/img/team/ShreyaMBiradar.jpeg"
                         className="img-fluid"
                         alt=""
-                      />
+                      /> */}
                     </div>
-                    <h4>Shreya M Biradar</h4>
-                    <span>Frontend Developer</span>
+                    <h4>Aditya Vikram Jajodia</h4>
+                    <span>Android Developer</span>
                     <div className="social">
                       {/* <a href=""><i className="ri-twitter-fill"></i></a> */}
-                      <a href="https://www.linkedin.com/in/shreya-biradar/">
+                      <a href="https://www.linkedin.com/in/aditya-vikram-jajodia-83a49960/">
                         {" "}
                         <i className="ri-linkedin-box-fill"></i>{" "}
                       </a>
