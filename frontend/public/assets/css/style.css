@@ -594,7 +594,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
   padding-top: 20px;
   margin-top: 20px;
   position: relative;
-  color: #0F437A;
+  color: #000;
   /* color: #4337DB; */
 }
 
@@ -616,7 +616,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
   display: block;
   width: 40px;
   height: 3px;
-  background: #FEBE10;
+  background: #FD79A8;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -677,7 +677,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
   margin: 10px 0 0 0;
   /* color: black; */
   /* background: #00356B; */
-  background: #00356B;
+  background: #1E9FD3;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.20);
 
@@ -1128,7 +1128,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 }
 
 .flip-card-front {
-  background-color: #2980b9;
+  background-color: #43A0E7;
   color: white;
 
 
@@ -1150,20 +1150,27 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 .flip-card-back {
   background-color: #2980b9;
   color: white;
-  text-align: left;
+  text-align: center;
+  align-items: center;
+  display: flex;
+
   transform: rotateY(180deg);
+  justify-content: center;
+
 }
 
-.flip-card-back h1 {
+.flip-card-back h2 {
   text-align: center;
   margin-top: 0.4rem;
+  font-size: 25px;
+  margin: 5px;
 
 }
 
 .flip-card-back p {
   margin-left: 0.3rem;
   padding-left: 0.3rem;
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -1705,7 +1712,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: linear-gradient(to right, #f9f1f0, #6EC78E);
+  background: linear-gradient(to right, #f9f1f0, #000);
 }
 
 #footer .footer-newsletter {
@@ -1722,7 +1729,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  color: #37517e;
+  color: #000;
 }
 
 #footer .footer-newsletter form {
@@ -1790,7 +1797,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #0d7a5f;
+  color: #FDCB6E;
   font-size: 18px;
   line-height: 1;
 }
@@ -1806,7 +1813,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #777777;
+  color: #FDCB6E;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1814,7 +1821,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #0d7a5f;
+  color: #FDCB6E;
 }
 
 #footer .footer-top .social-links a {
@@ -1833,7 +1840,7 @@ background-image: linear-gradient(315deg, #045de9 0%, #48c3eb 74%); */
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #0d7a5f;
+  background: #FDCB6E;
   color: #fff;
   text-decoration: none;
 }

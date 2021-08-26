@@ -1,17 +1,13 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import { BlogData } from "./blogImg";
-import BlogSlider from "./BlogSlider";
-import SearchIcon from "@material-ui/icons/Search";
-import { Typography } from "@material-ui/core";
 import contatct from "../../images/contact.jpeg";
 import ContactForm from "./ContactForm";
 
 const LandingPage = () => {
   return (
     <div>
-      <div className="common-color" style={{ background: "#43A0E7" }}>
+      <div>
         {/* <!-- ======= Header ======= --> */}
         <header
           id="header"
@@ -20,7 +16,7 @@ const LandingPage = () => {
         >
           <div className="container d-flex align-items-center">
             <h1 className="logo me-auto">
-              <a href="index.html">Resume Maker</a>
+              <a href="index.html">GenMoney</a>
             </h1>
 
             <nav id="navbar" className="navbar">
@@ -30,31 +26,11 @@ const LandingPage = () => {
                   <div class="dropdown-content">
                     <a href="#hero">Home</a>
                     <a href="#about">About US</a>
-                    <a href="#services">Services</a>
-                    <a href="#portfolio">Blogs</a>
+                    <a href="#services">What we offer</a>
                     <a href="#team">Our Team</a>
                     <a href="#contact">Contact</a>
                   </div>
                 </div>
-
-                <li>
-                  <Button
-                    className="getstarted scrollto"
-                    component={Link}
-                    to="/resumeBuilder"
-                  >
-                    Resume Builder
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    className="getstarted scrollto"
-                    component={Link}
-                    to="/hr"
-                  >
-                    ATS
-                  </Button>
-                </li>
               </ul>
               <i className="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -67,7 +43,7 @@ const LandingPage = () => {
         {/* <!-- End Header --> */}
 
         {/* <!-- ======= Hero Section ======= --> */}
-        <div id="hero" className="d-flex align-items-center section">
+        <section id="hero" className="d-flex align-items-center">
           <div className="container">
             <div className="row">
               <div
@@ -80,13 +56,6 @@ const LandingPage = () => {
                 <div className="d-flex justify-content-center justify-content-lg-start">
                   <a href="#about" className="btn-get-started scrollto">
                     Get early access
-                  </a>
-                  <a
-                    href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
-                    className="glightbox btn-watch-video"
-                  >
-                    <i className="bi bi-play-circle"></i>
-                    <span>Watch Video</span>
                   </a>
                 </div>
               </div>
@@ -125,7 +94,7 @@ const LandingPage = () => {
               ></path>
             </svg>
           </div>
-        </div>
+        </section>
 
         {/* <!-- End Hero --> */}
 
@@ -146,15 +115,25 @@ const LandingPage = () => {
                   </p>
                   <ul>
                     <li>
-                      <i className="ri-check-double-line"></i> Create Your
-                      Resume
+                      <i
+                        className="ri-check-double-line"
+                        style={{ color: "#FD79A8" }}
+                      ></i>{" "}
+                      Create Your Resume
                     </li>
                     <li>
-                      <i className="ri-check-double-line"></i> Check your score
+                      <i
+                        className="ri-check-double-line"
+                        style={{ color: "#FD79A8" }}
+                      ></i>{" "}
+                      Check your score
                     </li>
                     <li>
-                      <i className="ri-check-double-line"></i> Make your resume
-                      ATS friendly
+                      <i
+                        className="ri-check-double-line"
+                        style={{ color: "#FD79A8" }}
+                      ></i>{" "}
+                      Make your resume ATS friendly
                     </li>
                   </ul>
                 </div>
@@ -173,30 +152,24 @@ const LandingPage = () => {
           </section>
           {/* <!-- End About Us Section --> */}
 
-          {/* <!-- ======= Services Section ======= --> */}
+          {/* <!-- ======= Parents Section ======= --> */}
           <section id="services" className="services">
-            {/* <div className="quarter">
-            <img src="./assets/img/vector1.svg" />
-  </div>*/}
             <div className="container" data-aos="fade-up">
               <div className="section-title">
-                <h2>Our Services</h2>
+                <h2>For Parent</h2>
               </div>
               <div className="flex-container">
                 <div class="flip-card">
                   <div class="flip-card-inner">
                     <div class="flip-card-front">
-                      <h2>Resume Builder</h2>
+                      <h2> Made for Parents and Teens</h2>
                     </div>
                     <div class="flip-card-back">
-                      <h1>Steps</h1>
-                      <p>1.Pick a professionally designed resume template</p>
                       <p>
-                        2.Fill in all your details, skills, projects, work
-                        experience etc
+                        An app for helping parents to inculcate good financial
+                        habits in their growing champ and prepare him for the
+                        world in the early age.
                       </p>
-                      <p>3.Preview Changes</p>
-                      <p>4.Download Resume</p>
                     </div>
                   </div>
                 </div>
@@ -204,14 +177,43 @@ const LandingPage = () => {
                 <div class="flip-card">
                   <div class="flip-card-inner">
                     <div class="flip-card-front">
-                      <h2>ATS System</h2>
+                      <h2>Create your child's first account</h2>
                     </div>
                     <div class="flip-card-back">
-                      <h1>Steps</h1>
-                      <p>1.Upload your resume in pdf/.doc/.png format</p>
-                      <p>2.Upload the Job description</p>
-                      <p>3.Get score</p>
-                      <p>4.Fetch summary</p>
+                      <p>
+                        Create your child's first bank account in his teenage at
+                        the tip of your fingers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h2 style={{ fontSize: "26px" }}>
+                        Teach your child the value of hard-earned money
+                      </h2>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Give your champ daily tasks (like complete your hw) and
+                        reward him on completion of the task.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h2>Check your Champ</h2>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Have track of your champ's financial actions without
+                        actually controlling his/her financial habits.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -220,196 +222,74 @@ const LandingPage = () => {
           </section>
           {/* <!-- End Services Section --> */}
 
-          {/* <!-- ======= Resume-Builder Section ======= --> */}
-          <section id="Resume-Builder" className="Resume-Builder section-bg">
-            <div className="container-fluid" data-aos="fade-up">
-              <div className="row">
-                <div className="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-                  <div className="content">
-                    <h3>Build Your Resume ATS Friendly</h3>
-                    <ul>
-                      <li>
-                        <p>
-                          The purpose of a resume is to make a good first
-                          impression on a potential employer.{" "}
-                          <strong>
-                            Build a professional resume that catches the
-                            recruiter's eye.
-                          </strong>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          After being processed, about 75% of resumes are
-                          discarded, and many employers miss out on competent
-                          individuals who are unaware of how ATS works.{" "}
-                          <strong>
-                            You can use our ATS to check your resume.
-                          </strong>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          To avoid mistakes, keep an eye on your resume while
-                          you put in the data. Our resume builder ensures that
-                          your resume is properly aligned and formatted, making
-                          it appear to be a masterpiece. <br />
-                          <strong>
-                            Build a flawless and excellent Resume.
-                          </strong>
-                        </p>
-                      </li>
-                    </ul>
-                    <a data-bs-target="#accordion-list-4" class="btn">
-                      Build Resume
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-                  style={{
-                    backgroundImage: "url(" + "assets/img/why-us.png" + ")",
-                    width: "632px",
-                    backgroundColor: "rgba(19,104,235,0.4)",
-                    borderRadius: "67% 33% 36% 64% / 49% 35% 65% 51% ",
-                    height: "628px",
-                  }}
-                  data-aos="zoom-in"
-                  data-aos-delay="150"
-                >
-                  &nbsp;
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* <!-- End Why Us Section --> */}
-
-          {/* <!-- ======= ATS Section ======= --> */}
-          <section id="ATS" className="ATS">
+          {/* <!-- ======= Parents Section ======= --> */}
+          <section id="services" className="services">
             <div className="container" data-aos="fade-up">
-              <div className="row">
-                <div
-                  className="col-lg-6 d-flex align-items-center"
-                  data-aos="fade-right"
-                  data-aos-delay="100"
-                >
-                  <img
-                    src="assets/img/skills.png"
-                    className="img-fluid"
-                    alt=""
-                  />
+              <div className="section-title">
+                <h2>For Child</h2>
+              </div>
+              <div className="flex-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h2>Payments with Virtual Card</h2>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Every teen gets his/her own virtual card through which
+                        he/she can send and receive payment from their parents
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div
-                  className="col-lg-6 pt-4 pt-lg-0 content"
-                  data-aos="fade-left"
-                  data-aos-delay="100"
-                >
-                  <h3>Applicant Tracking System</h3>
-                  <div className="accordion-list">
-                    <ul>
-                      <li>
-                        <a
-                          data-bs-toggle="collapse"
-                          className="collapse"
-                          data-bs-target="#accordion-list-1"
-                        >
-                          <span style={{ color: "#FEBE10" }}>01</span>Upload
-                          Resume<i className="bx bx-chevron-down icon-show"></i>
-                          <i className="bx bx-chevron-up icon-close"></i>
-                        </a>
-                        <div
-                          id="accordion-list-1"
-                          className="collapse show"
-                          data-bs-parent=".accordion-list"
-                        >
-                          <p>
-                            Students or Recruiters can upload the resume to be
-                            scanned. The format of the resume should be .doc or
-                            .pdf or .png
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <a
-                          data-bs-toggle="collapse"
-                          className="collapse"
-                          data-bs-target="#accordion-list-2"
-                        >
-                          <span style={{ color: "#FEBE10" }}>02</span>
-                          Upload Job Description
-                          <i className="bx bx-chevron-down icon-show"></i>
-                          <i className="bx bx-chevron-up icon-close"></i>
-                        </a>
-                        <div
-                          id="accordion-list-2"
-                          className="collapse show"
-                          data-bs-parent=".accordion-list"
-                        >
-                          <p>
-                            Students or Recruiters can upload company specific
-                            job description. The format of the job description
-                            should be .doc or .pdf or .png
-                          </p>
-                        </div>
-                      </li>
 
-                      <li>
-                        <a
-                          data-bs-toggle="collapse"
-                          data-bs-target="#accordion-list-3"
-                          className="collapsed"
-                        >
-                          <span style={{ color: "#FEBE10" }}>03</span>Check Your
-                          Score<i className="bx bx-chevron-down icon-show"></i>
-                          <i className="bx bx-chevron-up icon-close"></i>
-                        </a>
-                        <div
-                          id="accordion-list-3"
-                          className="collapse"
-                          data-bs-parent=".accordion-list"
-                        >
-                          <p>
-                            ATS scores your resume on the key criteria
-                            recruiters and hiring managers look for.
-                          </p>
-                        </div>
-                      </li>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h2>Set personal saving goals</h2>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Teenagers can set specific goals for themselves and save
+                        money towards achieving the goal.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                      <li>
-                        <a
-                          data-bs-toggle="collapse"
-                          data-bs-target="#accordion-list-4"
-                          className="collapsed"
-                        >
-                          <span style={{ color: "#FEBE10" }}>04</span> View
-                          Result
-                          <i className="bx bx-chevron-down icon-show"></i>
-                          <i className="bx bx-chevron-up icon-close"></i>
-                        </a>
-                        <div
-                          id="accordion-list-4"
-                          className="collapse"
-                          data-bs-parent=".accordion-list"
-                        >
-                          <p>
-                            ATS will parse the information given in resume and
-                            display it as a short summary including the specific
-                            keywords in the resume.
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <a data-bs-target="#accordion-list-4" className="btn">
-                          Get Started
-                        </a>
-                      </li>
-                    </ul>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h2>Earn Money from Daily Tasks</h2>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Work on small tasks given by your parents and earn
+                        money. Get paid for completing your homework or cleaning
+                        your bed.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h2>Extra rewards for good work</h2>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Earn extra reward from GenMoney for consistency
+                        completing tasks, watching videos, playing games and
+                        much more.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* <!-- End ATS Section --> */}
+          {/* <!-- End Services Section --> */}
 
           {/* <!-- ======= Portfolio Section ======= --> */}
 
@@ -594,7 +474,7 @@ const LandingPage = () => {
                       className="collapse"
                       data-bs-target="#faq-list-1"
                     >
-                      Should we write our resume in past tense or present tense?{" "}
+                      What is GenMoney?{" "}
                       <i className="bx bx-chevron-down icon-show"></i>
                       <i className="bx bx-chevron-up icon-close"></i>
                     </a>
@@ -604,9 +484,9 @@ const LandingPage = () => {
                       data-bs-parent=".faq-list"
                     >
                       <p>
-                        It is advisable to write the resume in past tense, but
-                        there can be exceptions where the present tense may be
-                        more appropriate
+                        GenMoney is a mobile application for teenagers between
+                        13-18 years to understand the fundamentals of finance
+                        and manage their own finances.
                       </p>
                     </div>
                   </li>
@@ -619,7 +499,7 @@ const LandingPage = () => {
                       className="collapsed"
                     >
                       {" "}
-                      How do we know that our resume is ATS friendly or not?{" "}
+                      Will my child have his own bank account?{" "}
                       <i className="bx bx-chevron-down icon-show"></i>
                       <i className="bx bx-chevron-up icon-close"></i>
                     </a>
@@ -629,11 +509,8 @@ const LandingPage = () => {
                       data-bs-parent=".faq-list"
                     >
                       <p>
-                        The first step of your application is Resume
-                        shortlisting and it is an automatic process done by ATS.
-                        It finds specific keywords related to the job
-                        description,it searches for the keywords in your resume
-                        and shortlist accordingly.
+                        Yes, a minor account for the child will be opened at our
+                        partner bank.
                       </p>
                     </div>
                   </li>
@@ -645,7 +522,7 @@ const LandingPage = () => {
                       data-bs-target="#faq-list-3"
                       className="collapsed"
                     >
-                      Should we include soft skills in our resume?
+                      Why should my child learn about financial literacy?
                       <i className="bx bx-chevron-down icon-show"></i>
                       <i className="bx bx-chevron-up icon-close"></i>
                     </a>
@@ -655,8 +532,9 @@ const LandingPage = () => {
                       data-bs-parent=".faq-list"
                     >
                       <p>
-                        Yes, you can demonstrate your skills like leadership,
-                        teamwork, communication in resume
+                        Financial literacy is far more important than any other
+                        skill. Learning about it at an early age would give your
+                        child the edge to deal with real life situations.
                       </p>
                     </div>
                   </li>
@@ -668,7 +546,7 @@ const LandingPage = () => {
                       data-bs-target="#faq-list-4"
                       className="collapsed"
                     >
-                      How to list volunteer work on our resume?
+                      Do I control my child's account?
                       <i className="bx bx-chevron-down icon-show"></i>
                       <i className="bx bx-chevron-up icon-close"></i>
                     </a>
@@ -678,35 +556,10 @@ const LandingPage = () => {
                       data-bs-parent=".faq-list"
                     >
                       <p>
-                        Volunteer work can be a great addition to your resume
-                        and if demonstrated properly it can give you a edge
-                        amongst the other candidates. You can check our blog for
-                        the same.
-                      </p>
-                    </div>
-                  </li>
-
-                  <li data-aos="fade-up" data-aos-delay="500">
-                    <i className="bx bx-help-circle icon-help"></i>{" "}
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-list-5"
-                      className="collapsed"
-                    >
-                      {" "}
-                      Is it necessary to include resume header?{" "}
-                      <i className="bx bx-chevron-down icon-show"></i>
-                      <i className="bx bx-chevron-up icon-close"></i>
-                    </a>
-                    <div
-                      id="faq-list-5"
-                      className="collapse"
-                      data-bs-parent=".faq-list"
-                    >
-                      <p>
-                        Yes you should,infact it is the first thing recruiters
-                        and hiring managers will see, so make sure it is unique
-                        and it catches the attention of the recruiter.
+                        No. The child controls the account by himself. The
+                        motive of the application is to inculcate good financial
+                        habits amongst the teenagers. However, the parent has
+                        track of the activites of the child.
                       </p>
                     </div>
                   </li>
@@ -735,57 +588,6 @@ const LandingPage = () => {
                   className="php-email-form"
                 >
                   <ContactForm />
-                  {/* <div className="row">
-                  <div className="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control"
-                      id="name"
-                      required
-                    />
-                  </div>
-                  <div className="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label for="name">Subject</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="subject"
-                    id="subject"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="name">Message</label>
-                  <textarea
-                    className="form-control"
-                    name="message"
-                    rows="10"
-                    required
-                  ></textarea>
-                </div>
-                <div className="my-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                  <div className="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div className="text-center">
-                  <button type="submit">Send Message</button>
-                </div> */}
                 </form>
               </div>
             </div>
@@ -813,10 +615,10 @@ const LandingPage = () => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-3 col-md-6 footer-contact">
-                  <h3 style={{ color: "whitesmoke" }}>Resume Maker</h3>
+                  <h3 style={{ color: "whitesmoke" }}>GenMoney</h3>
                   <p style={{ color: "whitesmoke" }}>
                     India <br />
-                    <strong>Email:</strong> resume@diyintern.com
+                    <strong>Email:</strong> askingnikhil@gmail.com
                     <br />
                   </p>
                 </div>
@@ -826,26 +628,20 @@ const LandingPage = () => {
                   <ul style={{ color: "whitesmoke" }}>
                     <li>
                       <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="#" style={{ color: "black" }}>
+                      <a href="#" style={{ color: "white" }}>
                         Home
                       </a>
                     </li>
                     <li style={{ color: "black" }}>
                       <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="#" style={{ color: "black" }}>
+                      <a href="#" style={{ color: "white" }}>
                         About us
                       </a>
                     </li>
                     <li>
                       <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="#" style={{ color: "black" }}>
+                      <a href="#" style={{ color: "white" }}>
                         What we offer
-                      </a>
-                    </li>
-                    <li>
-                      <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="#" style={{ color: "black" }}>
-                        Privacy policy
                       </a>
                     </li>
                   </ul>
@@ -856,41 +652,25 @@ const LandingPage = () => {
                   <ul>
                     <li>
                       <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="#" style={{ color: "black" }}>
-                        Resume Builder
+                      <a href="#" style={{ color: "white" }}>
+                        For Parent
                       </a>
                     </li>
                     <li>
                       <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="#" style={{ color: "black" }}>
-                        Applicant Tracking System
+                      <a href="#" style={{ color: "white" }}>
+                        For Child
                       </a>
                     </li>
                   </ul>
                 </div>
 
                 <div className="col-lg-3 col-md-6 footer-links">
-                  <h4 style={{ color: "whitesmoke" }}>Our Social Networks</h4>
-                  <p style={{ color: "black" }}>
-                    Reach out to us incase of any query
-                  </p>
-                  <div className="social-links mt-3">
-                    <a href="#" className="twitter">
-                      <i className="bx bxl-twitter"></i>
-                    </a>
-                    <a href="#" className="facebook">
-                      <i className="bx bxl-facebook"></i>
-                    </a>
-                    <a href="#" className="instagram">
-                      <i className="bx bxl-instagram"></i>
-                    </a>
-                    <a href="#" className="google-plus">
-                      <i className="bx bxl-skype"></i>
-                    </a>
-                    <a href="#" className="linkedin">
-                      <i className="bx bxl-linkedin"></i>
-                    </a>
-                  </div>
+                  <h4 style={{ color: "whitesmoke" }}>
+                    Feel free to reach out to us{" "}
+                  </h4>
+                  <p style={{ color: "white" }}>askingnikhil@gmail.com</p>
+                  <p style={{ color: "white" }}>+91-9765233031</p>
                 </div>
               </div>
             </div>
@@ -900,14 +680,14 @@ const LandingPage = () => {
             <div className="copyright">
               &copy; Copyright{" "}
               <strong>
-                <span>DIYIntern</span>
+                <span>GenMoney</span>
               </strong>
               . All Rights Reserved
             </div>
             <div className="credits">
               Designed by{" "}
               <a href="#" style={{ color: "whitesmoke" }}>
-                DIYIntern
+                GenMoney
               </a>
             </div>
           </div>

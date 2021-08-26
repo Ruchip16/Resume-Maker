@@ -52,7 +52,10 @@ export default function ContactForm() {
           defaultValue=""
         />
       </div>
-      <Button variant="contained" color="primary">
+      <Button
+        variant="contained"
+        style={{ color: "black", backgroundColor: "pink", alignment: "center" }}
+      >
         Send
       </Button>
     </form>
