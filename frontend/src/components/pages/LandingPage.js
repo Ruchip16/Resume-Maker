@@ -11,9 +11,9 @@ import ContactForm from "./ContactForm";
 const LandingPage = () => {
   return (
     <div>
-      <div className="common-color">
+      <div className="common-color" style={{background:"#43A0E7"}}>
         {/* <!-- ======= Header ======= --> */}
-        <header id="header" className="fixed-top ">
+        <header id="header" className="fixed-top " style={{background:"#43A0E7"}}>
           <div className="container d-flex align-items-center">
             <h1 className="logo me-auto">
               <a href="index.html">Resume Maker</a>
@@ -125,7 +125,7 @@ const LandingPage = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="assets/img/hero-img.png"
+                  src="assets/img/teen1.png"
                   className="img-fluid animated"
                   alt=""
                 />
@@ -142,8 +142,8 @@ const LandingPage = () => {
             >
               <defs>
                 <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#2774ae" />
-                  <stop offset="100%" stop-color="#00356B" />
+                  <stop offset="0%" stop-color="#43A0E7" />
+                  <stop offset="100%" stop-color="#74B9FF" />
                 </linearGradient>
               </defs>
               <path
