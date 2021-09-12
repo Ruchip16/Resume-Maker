@@ -11,7 +11,7 @@ import {
   import { CardHeader } from "@material-ui/core";
   import AddIcon from "@material-ui/icons/Add";
   import RemoveIcon from "@material-ui/icons/Remove";
-  import React from "react";
+  import React , {useState} from "react";
   
   const Addons = () => {
     const paperStyle = {
@@ -40,17 +40,44 @@ import {
       padding: "15px 35px 11px 35px;",
       borderRadius: '20px'
     };
-    
+     const [inputList, setInputList] = useState([
+       {
+         section: "",
+       },
+     ]);
+
+     const handleInputChange = (e, index) => {
+       const { name, value } = e.target;
+       const list = [...inputList];
+       list[index][name] = value;
+       setInputList(list);
+     };
+     const handleAddClick = () => {
+       setInputList([...inputList, { section: "" }]);
+     };
+     const handleRemoveClick = (index) => {
+       const list = [...inputList];
+       list.splice(index, 1);
+       setInputList(list);
+     };
       return (
         <Grid>
           <Paper elevation={10} style={paperStyle}>
             <Grid align="center">
               <h2>Add-ons</h2>
             </Grid>
-    
-            <TextField label="Section 1" fullWidth required />
-            <Button style={btnStyle}>Add Section</Button>
-            <Button style={btnStyle}>Remove Section</Button>
+      {inputList.map((item, i) => {
+          return (
+            <div>
+            <TextField label="Section 1" fullWidth required name="section"/>
+           <Button style={btnStyle} onClick={() => handleAddClick(i)}>
+                Add Section
+              </Button>
+              <Button style={btnStyle} onClick={() => handleRemoveClick(i)}>
+                Remove Section
+              </Button>
+              </div>
+          );})}
           </Paper>
         </Grid>
       );

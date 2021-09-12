@@ -11,7 +11,7 @@ import {
   import { CardHeader } from "@material-ui/core";
   import AddIcon from "@material-ui/icons/Add";
   import RemoveIcon from "@material-ui/icons/Remove";
-  import React from "react";
+  import React, {useState} from "react";
   
   const TechnicalSkills = (props) => {
     const paperStyle = {
@@ -39,6 +39,28 @@ import {
       padding: "15px 35px 11px 35px;",
       borderRadius: '20px'
     };
+    const [inputList, setInputList] = useState([
+      {
+        school: "",
+        batch: "",
+      },
+    ]);
+
+    const handleInputChange = (e, index) => {
+      const { name, value } = e.target;
+      const list = [...inputList];
+      list[index][name] = value;
+      setInputList(list);
+    };
+    const handleAddClick = () => {
+      setInputList([...inputList, { school: "", batch: "" }]);
+    };
+    const handleRemoveClick = (index) => {
+      const list = [...inputList];
+      list.splice(index, 1);
+      setInputList(list);
+    };
+
   
     return (
       <Grid>

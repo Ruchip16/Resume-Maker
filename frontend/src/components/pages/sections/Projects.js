@@ -9,7 +9,7 @@ import {
   TextareaAutosize,
 } from "@material-ui/core";
 import { CardHeader } from "@material-ui/core";
-// import { useState } from 'react';
+ import { useState } from 'react';
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import React from "react";
@@ -41,39 +41,85 @@ const Projects = (props) => {
     padding: "15px 35px 11px 35px;",
     borderRadius: '20px'
   };
+  const [inputList, setInputList] = useState([
+    {
+      projectName: "",
+      projectDes: "",
+      link: "",
+      techStack: "",
+    },
+  ]);
+
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...inputList];
+    list[index][name] = value;
+    setInputList(list);
+  };
+  const handleAddClick = () => {
+    setInputList([
+      ...inputList,
+      { projectName: "", projectDes: "", link: "", techStack: "" },
+    ]);
+  };
+  const handleRemoveClick = (index) => {
+    const list = [...inputList];
+    list.splice(index, 1);
+    setInputList(list);
+  };
+
 
   return (
-    
     <Grid>
       <Paper elevation={10} style={paperStyle}>
         <Grid align="center">
           <h2>Projects</h2>
-          
         </Grid>
+        {inputList.map((item, i) => {
+          return (
+            <div>
+              <TextField
+                label="Project Name"
+                onChange={(e) => handleInputChange(e, i)}
+                value={item.projectName}
+                name="projectName"
+                fullWidth
+                required
+              />
+              <TextField
+                label="Project Description"
+                name="projectDes"
+                fullWidth
+                required
+                onChange={(e) => handleInputChange(e, i)}
+                value={item.projectDes}
+              />
+              <TextField
+                label="Link to Project"
+                name="link"
+                onChange={(e) => handleInputChange(e, i)}
+                value={item.link}
+                fullWidth
+                required
+              />
+              <TextField
+                label="Tech Stack"
+                name="techStack"
+                fullWidth
+                onChange={(e) => handleInputChange(e, i)}
+                value={item.techStack}
+              />
 
-        <TextField
-          label="Project Name"
-          onChange={(e) => props.setProject({ projectname: e.target.value })}
-          value={props.projectname} 
-          fullWidth
-          required
-        />
-        <TextField label="Project Description" fullWidth required
-        onChange={(e) => props.setProject({ description: e.target.value })}
-        value={props.description} 
-         />
-        <TextField label="Link to Project" 
-        onChange={(e) => props.setProject({ link: e.target.value })}
-        value={props.link}
-        fullWidth required  
-         />
-        <TextField label="Tech Stack" fullWidth
-          onChange={(e) => props.setProject({ techstack: e.target.value })}
-          value={props.techstack}
-          />
+              <Button style={btnStyle} onClick={handleAddClick}>
+                Add Project
+              </Button>
 
-        <Button style={btnStyle}>Add Project</Button>
-        <Button style={btnStyle}>Remove Project</Button>
+              <Button style={btnStyle} onClick={() => handleRemoveClick(i)}>
+                Remove Project
+              </Button>
+            </div>
+          );
+        })}
       </Paper>
     </Grid>
   );

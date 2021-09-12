@@ -1,6 +1,11 @@
+.searchbar {
+    top: 0;
+    text-align: center;
+}
+
 .slider {
     position: relative;
-    height: 50vh;
+    height: 80vh;
 
     display: flex;
     justify-content: center;
@@ -19,7 +24,6 @@
 .left-arrow {
     position: absolute;
     font-size: large;
-
     left: 0;
     z-index: 10;
     cursor: pointer;
@@ -42,6 +46,8 @@
 .image {
     box-shadow: 0 10px 20px -6px #000;
     background-image: linear-gradient(to right rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.5));
+    height: 80vh;
+
 }
 
 .title {

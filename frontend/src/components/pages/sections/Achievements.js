@@ -11,7 +11,7 @@ import {
 import { CardHeader } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
-import React from "react";
+import React,{useState} from "react";
 
 const Achievements = (props) => {
   const paperStyle = {
@@ -39,6 +39,26 @@ const Achievements = (props) => {
     padding: "15px 35px 11px 35px;",
     borderRadius: '20px'
   };
+  const [inputList, setInputList] = useState([
+    {
+      achievement: "",
+    },
+  ]);
+
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...inputList];
+    list[index][name] = value;
+    setInputList(list);
+  };
+  const handleAddClick = () => {
+    setInputList([...inputList, { achievement:""}]);
+  };
+  const handleRemoveClick = (index) => {
+    const list = [...inputList];
+    list.splice(index, 1);
+    setInputList(list);
+  };
 
   return (
     <Grid>
@@ -46,15 +66,26 @@ const Achievements = (props) => {
         <Grid align="center">
           <h2>Achievements</h2>
         </Grid>
-         <TextField label="Achievement 1" 
-         onChange={(e) => props.setAchievements({ achievement1: e.target.value })}
-         value={props.achievement1}
-         fullWidth required />
-        <br/>
-        <TextField label="Add-more" fullWidth onChange= {(e) => props.setAchievements({addmoree: e.target.value})} value={props.addmoree} />
+        {inputList.map((item, i) => {
+          return (
+            <div>
+              <TextField
+                label="Achievement 1"
+                onChange={(e) => handleInputChange(e, i)}
+                name="achievement"
+                value={item.achievement}
+                fullWidth
+                required
+              />
 
-        <Button style={btnStyle}>Add Achievement</Button>
-        <Button style={btnStyle}>Remove Achievement</Button>
+              <Button style={btnStyle} onClick={() => handleAddClick(i)}>
+                Add Achievement
+              </Button>
+              <Button style={btnStyle} onClick={() => handleRemoveClick(i)}>
+                Remove Achievement
+              </Button>
+            </div>
+          );})}
       </Paper>
     </Grid>
   );

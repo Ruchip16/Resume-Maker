@@ -6,6 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Chip from '@material-ui/core/Chip';
 import ProgressBar from './ProgressBar';
 import SwitchBtn from './SwitchBtn.js';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AutoGrid({active,setActive}) {
+export default function AutoGrid({active,setActive,clearEntries}) {
   const classes = useStyles();
 
   const [value, setValue] = React.useState(0);
@@ -52,6 +53,7 @@ export default function AutoGrid({active,setActive}) {
 })(Chip);
 
 
+  const history = useHistory();
   return (
     <div className={classes.root}>
       <Grid
@@ -63,7 +65,15 @@ export default function AutoGrid({active,setActive}) {
       >
         <Grid item xs style={{ backgroundColor: "none" }}>
           <Paper className={classes.paper}>
-            <h3>Resume Maker</h3>
+          <h3
+              className="logo me-auto"
+              onClick={() => {
+                history.push("/");
+              }}
+              style={{ cursor: "pointer" }}
+              >
+              Resume Maker
+            </h3>
           </Paper>
         </Grid>
         <Grid item xs={9}>
@@ -78,8 +88,7 @@ export default function AutoGrid({active,setActive}) {
               <StyledChip
                 size="Large"
                 label="Personal Details"
-                onClick={() => setActive("details")}
-              />
+                onClick={() => setActive("details")}/>
 
               <StyledChip 
               size="Large" 
@@ -92,8 +101,7 @@ export default function AutoGrid({active,setActive}) {
                 component="a"
                 href="#chip"
                 clickable
-                onClick={() => setActive("education")}
-              />
+                onClick={() => setActive("education")}/>
 
               <StyledChip size="Large" label="Technical Skills" clickable onClick={() => setActive("technicalSkills")} />
 
@@ -101,8 +109,8 @@ export default function AutoGrid({active,setActive}) {
                 size="Large"
                 label="Projects"
                 clickable
-                onClick={() => setActive("projects")}
-              />
+                onClick={() => setActive("projects")}/>
+                
               <StyledChip size="Large" label="Responsibilities" clickable onClick={() => setActive("responsibilities")}/>
               <StyledChip size="Large" label="Blogs" clickable onClick={() => setActive("blogs")} />
               <StyledChip size="Large" label="Experience" clickable onClick={() => setActive("experience")}/>
@@ -111,6 +119,7 @@ export default function AutoGrid({active,setActive}) {
               <StyledChip size="Large" label="Hobbies" clickable onClick={() => setActive("hobbies")}/>
               <StyledChip size="Large" label="Workshops" clickable onClick={() => setActive("workshops")}/>
               <StyledChip size="Large" label="Add-ons" clickable onClick={() => setActive("addons")} />
+              
 
               
               
@@ -122,11 +131,11 @@ export default function AutoGrid({active,setActive}) {
         </Grid>
         <Grid item xs>
           <Paper className={classes.paper}>
-            <SwitchBtn />
+            <SwitchBtn clearBtn={clearEntries}/>
           </Paper>
         </Grid>
       </Grid>
-      <ProgressBar/>
+      <ProgressBar />
     </div>
   );
 }

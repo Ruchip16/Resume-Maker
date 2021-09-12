@@ -25,9 +25,9 @@ import { withStyles } from '@material-ui/core/styles';
 // }
 
 
-const ClearButton = () => {
+const ClearButton = ({clearBtn}) => { 
 
-const StyledButton = withStyles({
+const StyledButton = withStyles({ 
   root: {
     "&:hover": {
        background: '#A3C1AD',
@@ -45,12 +45,16 @@ const StyledButton = withStyles({
       boxShadow: "0 3px 5px 2px rgb(20 25 24 / 30%)"
     }
   })(Button);
-
+ 
+  
   return (
     <div>
-      <StyledButton>Clear</StyledButton>
+      <StyledButton onClick={clearBtn}>
+        Reset
+      </StyledButton>
+      
     </div>
   )
 }
-
+ 
 export default ClearButton
