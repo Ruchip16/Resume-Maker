@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import HR_Card from './HR_Card';
 import { makeStyles } from '@material-ui/core';
 import HRButton from './HR_button';
-import { BrowserRouter as Router, useHistory } from 'react-router-dom';
+import { BrowserRouter as useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
 // CSS

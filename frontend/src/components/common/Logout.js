@@ -4,7 +4,7 @@ import {UserContext} from "../../App"
 
 
 function Logout() {
-    const {state,dispatch} = useContext(UserContext);
+    const {dispatch} = useContext(UserContext);
     const history=useHistory();
     useEffect(()=>{
         fetch('/logout',{

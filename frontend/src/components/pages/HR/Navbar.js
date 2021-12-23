@@ -1,10 +1,6 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter, useHistory } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements';
-import { Redirect } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import { Router } from 'react-router-dom';
 
 const Navbar = () => {

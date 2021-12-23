@@ -13,9 +13,6 @@ const Summary = () => {
         marginLeft: '20px',
         backgroundColor: "rgb(221 221 228)",
     };
-    const avatarStyle = {
-        backgroundColor: "black",
-    };
       
     const btnStyle = {
         color: "#fff",

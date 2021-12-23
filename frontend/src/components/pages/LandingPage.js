@@ -1,10 +1,8 @@
 import { Button } from "@material-ui/core";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BlogData } from "./blogImg";
 import BlogSlider from "./BlogSlider";
-import SearchIcon from "@material-ui/icons/Search";
-import { Typography } from "@material-ui/core";
 import contatct from "../../images/contact.jpeg";
 import ContactForm from "./ContactForm";
 import SignInOutContainer from "../common/popup";
@@ -31,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const LandingPage = () => {
-  const {state,dispatch} = useContext(UserContext);
+  const {state} = useContext(UserContext);
   
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ContactForm() {
   const classes = useStyles();
-  const [value, setValue] = React.useState("Controlled");
+  const [setValue] = React.useState("Controlled");
 
   const handleChange = (event) => {
     setValue(event.target.value);

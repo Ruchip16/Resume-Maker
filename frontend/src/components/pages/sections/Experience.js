@@ -3,7 +3,6 @@ import {
     TextField,
     Grid,
     Paper,
-    TextareaAutosize,
   } from "@material-ui/core";
   
   import React, {useState} from "react";
@@ -16,14 +15,6 @@ import {
       marginLeft: '20px',
       backgroundColor: "rgb(221 221 228)",
     // boxShadow: '-10px 25px 50px rgba(0, 0, 0, .2)',
-    };
-    const avatarStyle = {
-      backgroundColor: "black",
-    };
-    const textareaStyle = {
-      marginTop: "10px",
-      width: "720px",
-      height: "100px",
     };
   
     const btnStyle = {

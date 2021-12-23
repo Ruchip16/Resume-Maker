@@ -45,7 +45,7 @@ function BlogSlider({ slides }) {
           <ArrowLeftIcon className="left-arrow" onClick={prevSlide} />
           <ArrowRightIcon className="right-arrow" onClick={nextSlide} />
           {BlogData.filter((blog) => {
-            if (searchTerm == "") {
+            if (searchTerm === "") {
               return blog;
             } else if (
               blog.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -58,7 +58,7 @@ function BlogSlider({ slides }) {
                 className={index === current ? "slide active" : "slide"}
                 key={index}
               >
-                {index == current && (
+                {index === current && (
                   <div>
                     <img
                       src={blog.image}

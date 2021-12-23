@@ -76,17 +76,17 @@ function Template( props) {
           >
             <center>
               <p style={{ fontSize: "1rem", paddingTop: "10px" }}>
-                <h2> {props.name == "" ? "Name" : props.name}</h2>
+                <h2> {props.name === "" ? "Name" : props.name}</h2>
               </p>
               <p>
-                {props.email == "" ? "Email id" : props.email} |{" "}
-                {props.phone == "" ? "Phone" : props.phone}{" "}
+                {props.email === "" ? "Email id" : props.email} |{" "}
+                {props.phone === "" ? "Phone" : props.phone}{" "}
               </p>
               <p>
-                {props.github == "" ? "Github Link" : props.github} |{" "}
-                {props.linkedin == "" ? "LinkedIn" : props.linkedin}{" "}
+                {props.github === "" ? "Github Link" : props.github} |{" "}
+                {props.linkedin === "" ? "LinkedIn" : props.linkedin}{" "}
               </p>
-              <p>{props.addons == "" ? "" : props.addons}</p>
+              <p>{props.addons === "" ? "" : props.addons}</p>
             </center>
             <hr />
             <div className={classes.root}>
@@ -104,18 +104,18 @@ function Template( props) {
                       <div id="degree" style={{ textAlign: "left" }}>
                         {/* <p style={{fontWeight:"500", marginTop: '10px'}}>Degree</p> */}
                         <p>
-                          {props.degree == "" ? "<Degree>" : props.degree} |{" "}
-                          {props.college == ""
+                          {props.degree === "" ? "<Degree>" : props.degree} |{" "}
+                          {props.college === ""
                             ? "<Name of College>"
                             : props.college}
                         </p>
-                        <p>{props.major == "" ? "<Major>" : props.major}</p>
+                        <p>{props.major === "" ? "<Major>" : props.major}</p>
                         <p>
-                          Year : {props.batch == "" ? "<Batch>" : props.batch}
+                          Year : {props.batch === "" ? "<Batch>" : props.batch}
                         </p>
                         <p>
                           CGPA :{" "}
-                          {props.collegeAgg == ""
+                          {props.collegeAgg === ""
                             ? "<Aggregate>"
                             : props.collegeAgg}
                         </p>
@@ -125,16 +125,16 @@ function Template( props) {
 
                         {/* <p style={{ fontWeight: "500" }}>Intermediate</p> */}
                         <p>
-                          {props.school == ""
+                          {props.school === ""
                             ? "<Name of School>"
                             : props.school}
                         </p>
                         <p>
-                          {props.schoolBatch == ""
+                          {props.schoolBatch === ""
                             ? "<Batch>"
                             : props.schoolBatch}{" "}
                         </p>
-                        {/* <p>{ (props.schoolAgg == '') ? '<Aggregate>' : props.schoolAgg }</p> */}
+                        {/* <p>{ (props.schoolAgg === '') ? '<Aggregate>' : props.schoolAgg }</p> */}
                       </div>
                       {/* <div id="tenth" style={{textAlign:"left"}}>
                                         <p style={{fontWeight:"500"}}>10th</p>
@@ -154,24 +154,24 @@ function Template( props) {
                         <ul>
                           <li>
                             <p>
-                              {props.programminglanguages == ""
+                              {props.programminglanguages === ""
                                 ? "<Programming Languages>"
                                 : props.programminglanguages}
                             </p>
                           </li>
                           <li>
-                            <p>{props.dbms == "" ? "<DBMS>" : props.dbms}</p>
+                            <p>{props.dbms === "" ? "<DBMS>" : props.dbms}</p>
                           </li>
                           <li>
                             <p>
-                              {props.datamodelling == ""
+                              {props.datamodelling === ""
                                 ? "<Data Modelling>"
                                 : props.datamodelling}
                             </p>
                           </li>
                           <li>
                             <p>
-                              {props.platforms == ""
+                              {props.platforms === ""
                                 ? "<Platforms>"
                                 : props.platforms}
                             </p>
@@ -194,18 +194,18 @@ function Template( props) {
                       </h5>
                       <div>
                         <p style={{ fontWeight: "350" }}>
-                          {props.projectname == ""
+                          {props.projectname === ""
                             ? "<Name of Project>"
                             : props.projectname}
                         </p>
                         <p>
-                          {props.description == ""
+                          {props.description === ""
                             ? "<Description>"
                             : props.description}
                         </p>
-                        <p>{props.link == "" ? "<Link>" : props.link}</p>
+                        <p>{props.link === "" ? "<Link>" : props.link}</p>
                         <p>
-                          {props.techstack == ""
+                          {props.techstack === ""
                             ? "<Tech Stack>"
                             : props.techstack}
                         </p>
@@ -220,12 +220,12 @@ function Template( props) {
                       </h5>
                       <p>
                         • Blog website :{" "}
-                        {props.linkforblog == ""
+                        {props.linkforblog === ""
                           ? "<Link for Blog>"
                           : props.linkforblog}
                       </p>
                       <p>
-                        {props.topicforblog == ""
+                        {props.topicforblog === ""
                           ? "<Blog Topic>"
                           : props.topicforblog}
                       </p>
@@ -240,19 +240,19 @@ function Template( props) {
                       </h5>
                       <div>
                         <p style={{ fontWeight: "350" }}>
-                          {props.company1 == "" ? "<Company1>" : props.company1}{" "}
+                          {props.company1 === "" ? "<Company1>" : props.company1}{" "}
                           |{" "}
-                          {props.jobtitle == ""
+                          {props.jobtitle === ""
                             ? "<Job Title>"
                             : props.jobtitle}
                         </p>
                         <ul>
                           {/* <li>
-                                                <p>{(props.city== '') ? '<City/State>' : props.city}</p>
+                                                <p>{(props.city=== '') ? '<City/State>' : props.city}</p>
                                             </li>  */}
                           <li>
                             <p>
-                              {props.descriptionn == ""
+                              {props.descriptionn === ""
                                 ? "<Description>"
                                 : props.descriptionn}
                             </p>
@@ -261,16 +261,16 @@ function Template( props) {
                       </div>
                       <div>
                         <p style={{ fontWeight: "350" }}>
-                          {props.employer == "" ? "<Company2>" : props.employer}{" "}
-                          | {props.role == "" ? "<Job Title>" : props.role}
+                          {props.employer === "" ? "<Company2>" : props.employer}{" "}
+                          | {props.role === "" ? "<Job Title>" : props.role}
                         </p>
                         <ul>
                           {/* <li>
-                                                <p>{(props.state== '') ? '<City/State>' : props.state}</p>
+                                                <p>{(props.state=== '') ? '<City/State>' : props.state}</p>
                                             </li>  */}
                           <li>
                             <p>
-                              {props.work == "" ? "<Description>" : props.work}
+                              {props.work === "" ? "<Description>" : props.work}
                             </p>
                           </li>
                         </ul>
@@ -286,12 +286,12 @@ function Template( props) {
                       <ul>
                         <li>
                           <p>
-                            {props.achievement1 == ""
+                            {props.achievement1 === ""
                               ? "<Achievement1>"
                               : props.achievement1}
                           </p>
                         </li>
-                        <p>{props.addmoree == "" ? "" : props.addmoree}</p>
+                        <p>{props.addmoree === "" ? "" : props.addmoree}</p>
                       </ul>
                     </div>
                     <br />
@@ -304,14 +304,14 @@ function Template( props) {
                       <ul>
                         <li>
                           <p>
-                            {props.workshop1 == ""
+                            {props.workshop1 === ""
                               ? "<Workshop1>"
                               : props.workshop1}
                           </p>
                         </li>
                         <li>
                           <p>
-                            {props.workshop2 == ""
+                            {props.workshop2 === ""
                               ? "<Workshop2>"
                               : props.workshop2}
                           </p>
@@ -327,18 +327,18 @@ function Template( props) {
                       </h5>
                       <div style={{ textAlign: "left", lineHeight: "20px" }}>
                         <p style={{ fontWeight: "350" }}>
-                          {props.positionofresponsibility == ""
+                          {props.positionofresponsibility === ""
                             ? "<Your Role 1>"
                             : props.positionofresponsibility}{" "}
                           |{" "}
-                          {props.organization == ""
+                          {props.organization === ""
                             ? "<Organization>"
                             : props.organization}
                         </p>
                         <ul>
                           <li>
                             <p>
-                              {props.describe == ""
+                              {props.describe === ""
                                 ? "<Description>"
                                 : props.describe}
                             </p>
@@ -346,10 +346,10 @@ function Template( props) {
                         </ul>
                       </div>
                       {/* <div style={{textAlign:"left",lineHeight:"20px"}}>
-                                    <p style={{fontWeight:"350"}}>{(props.company1 == '') ? '<Your Role 2>' : props.company1} | {(props.jobtitle== '') ? '<Organization>' : props.jobtitle}</p>
+                                    <p style={{fontWeight:"350"}}>{(props.company1 === '') ? '<Your Role 2>' : props.company1} | {(props.jobtitle=== '') ? '<Organization>' : props.jobtitle}</p>
                                         <ul>  
                                             <li>
-                                                <p>{(props.descriptionn == '') ? '<Description>' : props.descriptionn}</p>
+                                                <p>{(props.descriptionn === '') ? '<Description>' : props.descriptionn}</p>
                                             </li>   
                                         </ul>
                                     </div> */}
@@ -366,21 +366,21 @@ function Template( props) {
                           <li>
                             <p>
                               {" "}
-                              {props.certifyname == ""
+                              {props.certifyname === ""
                                 ? "<Certfication Name>"
                                 : props.certifyname}{" "}
                               |{" "}
-                              {props.issuingorg == ""
+                              {props.issuingorg === ""
                                 ? "<Organization>"
                                 : props.issuingorg}
                             </p>
                           </li>
                           <p>
                             {" "}
-                            {props.addcertify == ""
+                            {props.addcertify === ""
                               ? ""
                               : props.addcertify}{" "}
-                            {props.addorg == "" ? "" : props.addorg}
+                            {props.addorg === "" ? "" : props.addorg}
                           </p>
                         </ul>
                       </div>

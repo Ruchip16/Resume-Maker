@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Card, CardContent, Typography, withTheme } from '@material-ui/core'
+import { Card, CardContent, Typography } from '@material-ui/core'
 import HRButton from './HR_button';
 import { makeStyles } from '@material-ui/core';
 

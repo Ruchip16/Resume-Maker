@@ -1,16 +1,9 @@
 import {
   Button,
-  Checkbox,
-  FormControlLabel,
   TextField,
-  Avatar,
   Grid,
   Paper,
-  TextareaAutosize,
 } from "@material-ui/core";
-import { CardHeader } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
 import React,{useState} from "react";
 
 const Achievements = (props) => {
@@ -22,15 +15,7 @@ const Achievements = (props) => {
     backgroundColor: "rgb(221 221 228)",
   // boxShadow: '-10px 25px 50px rgba(0, 0, 0, .2)',
   };
-  const avatarStyle = {
-    backgroundColor: "black",
-  };
-  const textareaStyle = {
-    marginTop: "10px",
-    width: "720px",
-    height: "100px",
-  };
-
+  
   const btnStyle = {
     color: "#fff",
     backgroundColor: "#00416A",

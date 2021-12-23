@@ -9,7 +9,7 @@ import {
   Typography,
   Link,
 } from "@material-ui/core";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { UserContext } from "../../App";
@@ -65,7 +65,7 @@ const handlesubmit=(e)=>{
       axios.post('/login',postdata)
       .then((response)=>{
           console.log(response.data.message)
-          if(response.status==201)
+          if(response.status===201)
           {
               dispatch({type:"USER",payload:true})
               window.alert(response.data.message)

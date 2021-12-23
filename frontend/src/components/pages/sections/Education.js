@@ -1,15 +1,10 @@
 import {
   Button,
-  Checkbox,
-  FormControlLabel,
   TextField,
-  Avatar,
   Grid,
   Paper,
-  TextareaAutosize,
 } from "@material-ui/core";
-import { CardHeader } from "@material-ui/core";
-import LockIcon from "@material-ui/icons/Lock";
+
 import React, { useState } from "react";
 
 const Education = (props) => {
@@ -21,15 +16,7 @@ const Education = (props) => {
     backgroundColor: "rgb(221 221 228)",
     // boxShadow: '-10px 25px 50px rgba(0, 0, 0, .2)',
   };
-  const avatarStyle = {
-    backgroundColor: "black",
-  };
-  const textareaStyle = {
-    marginTop: "10px",
-    width: "650px",
-    height: "100px",
-  };
-
+  
   const btnStyle = {
     color: "#fff",
     backgroundColor: "#00416A",
